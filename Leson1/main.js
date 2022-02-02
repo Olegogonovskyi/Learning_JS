@@ -1,6 +1,7 @@
 
 // Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
 //     Вивести кожну змінну за допомогою: console.log , alert, document.writelet hel ='hello';
+let hel = 'hello'
 {let xxx = hel
 console.log(xxx);
 alert(xxx);
@@ -202,12 +203,61 @@ nrig =true;
     document.write(xxx);
 }
 
+// Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person. (Не об'єкт)
+
+let firstName = 'Oleg';
+    let lastName ='Ogonovskyi'
+let middleName = 'Yaroslavovych'
+let person = firstName +' '+ lastName + ' ' + middleName;
+
+console.log(`${firstName} ${lastName} ${middleName}`);
+console.log(person)
+
+// За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+//     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
 
 
 
+    firstName = prompt('тебе звати', firstName)
+    middleName = prompt('по-батькові', middleName)
+    let age = prompt('тобі', 31)
+    alert(`Вітаю ${firstName} ${middleName}. Тобі ${age} років`)
 
+// За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+//     let a = 100; let b = '100'; let c = true;
 
+{
+    let a = 100;
+let b = '100';
+let c = true;
+console.log(typeof a)
+console.log(typeof b)
+console.log(typeof c)
+}
+//
+// Визначити відповідний оператор в виразах що б вийшов відповідний результат.
+//     В однакових виразах не використовувати однакові оператори!!!
 
-
-
+// 5 ? 6 -> true
+console.log(5<6)
+// 5 ? 6 -> false
+console.log(5>6)
+// 5 ? 6 -> false
+console.log(5 == 6)
+// 5 ? 6 -> false
+console.log(5 === 6)
+// 10 ? 10 -> true
+console.log(10 !== 6)
+// 10 ? 10 -> true
+console.log(10 == 10)
+// 10 ? 10 -> false
+console.log(10 < 10)
+// 10 ? 10 -> false
+console.log(10 > 10)
+// 10 ? 10 -> false
+console.log(10 != 10)
+// 123 ? '123' -> false
+console.log(123 < '123')
+// 123 ? '123' -> true
+console.log(123 == '123')
 
