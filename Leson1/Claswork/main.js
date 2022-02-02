@@ -34,6 +34,7 @@ let book2 = {
     autor: 'Losenko',
 }
 
+
     books = new Array(book1,book2)
     console.log(books)
 console.log(book1)
