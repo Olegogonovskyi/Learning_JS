@@ -2,62 +2,89 @@
 //     Потрібно знайти та вивести максимальне число з тих двох .
 //     Також потрібно врахувати коли введені рівні числа.
 
-// let xarr = [10, 20];
-// let xmax = Math.max(...xarr);
-// let xmin = Math.min(...xarr);
-// console.log( xmax );
-//
-// (xmax === xmin) ? console.log('числа рівні') : console.log('числа не рівні');
+let xarr = [10, 20];
+let xmax = Math.max(...xarr);
+let xmin = Math.min(...xarr);
+console.log( xmax );
+
+(xmax === xmin) ? console.log('числа рівні') : console.log('числа не рівні');
 
 
 // - У першому під'їзді квартири з 1 до 20. У другому з 21 по 48. У третьому з 49 по 90.
 // Користувач вводить номер квартири просто в змінні або через prompt('') .
 //     Програма повинна зазначити, в якому під'їзді знаходиться дана квартира.
 
-// let flat = prompt('введіть номер квартири від 1 до 90')
-//
-// if (flat>=1 && flat<=20) {
-//     console.log(flat, 'Перший підїзд');
-// } else if (flat>=21 && flat<=48) {
-//     console.log(flat, 'Другий підїзд');
-// } else if (flat>=49 && flat<=90) {
-//     console.log(flat, 'Третій підїзд');
-// }
-// else    {
-//     console.log(flat, 'то певно підвал');
-// }
-//
+let flat = prompt('введіть номер квартири від 1 до 90')
+
+if (flat>=1 && flat<=20) {
+    console.log(flat, 'Перший підїзд');
+} else if (flat>=21 && flat<=48) {
+    console.log(flat, 'Другий підїзд');
+} else if (flat>=49 && flat<=90) {
+    console.log(flat, 'Третій підїзд');
+}
+else    {
+    console.log(flat, 'то певно підвал');
+}
+
 // - Ми маємо змінну number в яку користувач задає числове значення,
 //     якщо змінна рівна 10 вивести повідомлення ВІРНО, якщо змінна не рівна 10 - тоді НЕВІРНО
 
-// (+prompt('Цифру вводь!') === 10) ? console.log('вірно') : console.log('Не вірно');
+(+prompt('Цифру вводь!') === 10) ? console.log('вірно') : console.log('Не вірно');
 
 
 // - Ми маємо змінну x в яку користувач задає  значення,  якщо в змінну записане число, вивести 1,
 //     якщо в змінну записали стрінгу вивести 2, якщо булеве значення - 3, якщо об'єкт або масив - 3.
 // якщо в змінну записали щось інше, спрацьовує else
-//
+
 // let x = 'sfsdfsd'; // string
-// let x = [3,4,6]; // object
-//
-// if (typeof x === "number") {
-//     console.log(1);
-// } else if ( typeof x === "string") {
-//     console.log(2)
-// } else if ( typeof x === "boolean") {
-//     console.log(3)
-// } else if (typeof x === "object") {
-//     console.log(4)
-// } else {
-//     console.log('hmmmm')
-// }
+let x = [3,4,6]; // object
+
+if (typeof x === "number") {
+    console.log(1);
+} else if ( typeof x === "string") {
+    console.log(2)
+} else if ( typeof x === "boolean") {
+    console.log(3)
+} else if (typeof x === "object") {
+    console.log(4)
+} else {
+    console.log('hmmmm')
+}
+
+// Задача-гра "чи ми йдемо сьогодні в OKTEN на навчання?".
+//     Змінна, яка характеризує температуру. Якщо температура від +10 до +22 вивести повідомлення що ми йдемо ВЧИТИСЯ .
+//     Якщо інша темпаретура, тоді виводимо повідомлення що сидимо вдома і вчимося ОНЛАЙН
+
+let weather = 15;
+(weather>=10 && weather<=22) ? console.log('Ідемо вчитись') : console.log('Сидимо краще вдома');
 
 
 
+// - За допомогою switch case - реалізувати гру - вікторину, де ми вводимо число від 1 до 5. І взалежності від введеного
+//     числа нам дається приз. (Авто, Мото, Телефон, і т.д ) і якщо число не підходить тоді  вивести Повідомлення - що число не вірне ... .
 
+let ChoosNum = 4;
+switch (ChoosNum) {
+    case 1:
+        console.log("candy");
+        break;
+    case 2:
+        console.log("nuts");
+        break;
+    case 3:
+        console.log("milk");
+        break;
+    case 4:
+        console.log("little lolypop");
+        break;
+    case 5:
+        console.log("ice-cream");
+        break;
+    default:
+        console.log("Number is not right");
 
-
-
+}
 
 
 
