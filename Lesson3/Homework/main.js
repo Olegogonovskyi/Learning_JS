@@ -46,9 +46,48 @@
 //     i++
 //     }
 
+// // - Створити порожній масив. Наповнити його 10 елементами (різними за типами)
+// // через звернення до конкретних індексів.
+// //     Вивести в консоль всі його елементи в циклі.
+//
+// let arr4 =[];
+// arr4[0] = '1'
+// arr4[1] = '2'
+// arr4[2] = '3'
+// arr4[3] = 'red'
+// arr4[4] = 'alert'
+// arr4[5] = 'is'
+// arr4[6] = 'supper'
+// arr4[7] = 'game'
+// arr4[8] = true
+// arr4[9] = false
+//
+// for (let i = 0; i < arr4.length; i++) {
+//     let arr4Element = arr4[i];
+//     console.log(arr4Element);
+//
+// }
 
+// // Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+//
+// for (i=0; i<=10; i++) {
+// document.write(i)
+//     console.log(i)
+// }
+// // Створити цикл for на 100 ітерацій з кроком 1.
+// // Вивести поточний номер кроку через console.log та document.write
+//
+// for (i=0; i<=100; i++) {
+// document.write(i)
+//     console.log(i)
+// }
+// Створити цикл for на 100 ітерацій з кроком 2.
+// Вивести поточний номер кроку через console.log та document.write
 
-
+for (i=0; i<=100; i++) {
+document.write(i)
+    console.log(i)
+}
 
 
 
