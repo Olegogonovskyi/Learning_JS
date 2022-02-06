@@ -7,47 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="script" href="main.js">
     <title>cw1</title>
+    <script src="main.js">
+    </script>
+
 </head>
 <body>
+<style>
+.warp {
+    display: flex;
+    align-items: center;
+    background: aquamarine;
+    margin: 10px;
+    justify-content: space-between;
+}
 
-<!--<ul>-->
-<!--    <li>listOfItems</li>-->
-<!--<script>-->
-<!--    let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];-->
-<!--    for (let listOfItem of listOfItems) {-->
-<!--document.write(`<li> ${listOfItem} </li>`)-->
-<!--    }-->
-<!--    </script>-->
-<!--</ul>-->
+.textinf {
+    display: block;
+    padding-left: 10px;
+    width: 70%;
 
-<div>
-    <script src="main.js">
-        for (let simpson of simpsons) {
-            document.write(`<h1> ${simpson.name} ${simpson.surname} ${simpson.age}</h1>`)
-            document.write( `<p> ${simpson.info} </p>`)
+}
+h1  {
+    background: burlywood;
+    text-align: center;
+}
+img {
+    width: 200px;
+}
+
+</style>
+<ul>
+    <li>listOfItems</li>
+<script>
+    let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+    for (let listOfItem of listOfItems) {
+document.write(`<li> ${listOfItem} </li>`)
+    }
+    </script>
+</ul>
+
+    <script>
+                for (let simpson of simpsons) {
+
+            document.write (
+`<div class="warp">
+<div class="textinf"><h1> ${simpson.name} ${simpson.surname} має ${simpson.age} років </h1>
+<p> ${simpson.info} </p></div>
+<img src="${simpson.photo} " alt="${simpson.name} ">
+</div>` )
         }
     </script>
-</div>
 
 
 
-<!--&lt;!&ndash;template 2.1&ndash;&gt;-->
-<!--<div>-->
-<!--    NAME- SURNAME- AGE- INFO- <img src="PHOTO" alt="">-->
-<!--</div>-->
-
-<!--&lt;!&ndash;template 2.2&ndash;&gt;-->
-<!--<div>-->
-<!--    <h2>NAME SURNAME. age is - AGE</h2>-->
-<!--    <p>INFO</p>-->
-<!--    <img src="PHOTO" alt="">-->
-<!--</div>-->
-<!--&lt;!&ndash;-->
-<!--інші об'єкти з масиву-->
-<!--...-->
-<!--...-->
-<!--...-->
-<!--&ndash;&gt;-->
 
 
 

@@ -1,3 +1,4 @@
+
 let simpsons = [
     {
         name: 'Bart',
@@ -35,7 +36,3 @@ let simpsons = [
         photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
     },
 ];
-// for (let simpson of simpsons) {
-//     document.write(`<h1> ${simpson.name} ${simpson.surname} ${simpson.age}</h1>`)
-//     document.write( `<p> ${simpson.info} </p>`)
-// }
