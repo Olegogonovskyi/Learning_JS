@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="script" href="main.js">
+
     <title>cw1</title>
     <script src="main.js">
     </script>
@@ -16,7 +16,7 @@
 .warp {
     display: flex;
     align-items: center;
-    background: aquamarine;
+    background: #d9d9d9;
     margin: 10px;
     justify-content: space-between;
 }
@@ -33,6 +33,7 @@ h1  {
 }
 img {
     width: 200px;
+    padding-right: 10px;
 }
 
 </style>
@@ -48,7 +49,6 @@ document.write(`<li> ${listOfItem} </li>`)
 
     <script>
                 for (let simpson of simpsons) {
-
             document.write (
 `<div class="warp">
 <div class="textinf"><h1> ${simpson.name} ${simpson.surname} має ${simpson.age} років </h1>
