@@ -14,6 +14,7 @@ function maxOfthreeNum (a,b,c) {
     return max;
 }
 
+
 console.log(maxOfthreeNum(-10, 10, 110))
 
 // - створити функцію яка повертає найбільше число з масиву
