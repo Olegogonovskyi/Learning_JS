@@ -29,10 +29,18 @@
 // let textWrite = (txt) => (document.write(`<p> ${txt} </p>`))
 // textWrite('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, laboriosam modi quas similique tempore voluptatum. At eveniet sunt vel vitae.')
 
-
-
-
-
+// // створити функцію яка  створює ul з трьома елементами li.
+// //     Текст li задати через аргумент всім однаковий
+//
+// let createUlLiwithFn = (item) => {
+//         document.write(`<ul>`)
+//         document.write(`<li> ${item} </li>`)
+//         document.write(`<li> ${item} </li>`)
+//         document.write(`<li> ${item} </li>`)
+//         document.write(`</ul>`)
+//     }
+//
+//     createUlLiwithFn('armstrong');
 
 
 
