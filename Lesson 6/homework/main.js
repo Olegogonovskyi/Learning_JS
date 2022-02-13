@@ -40,14 +40,15 @@
 //     return str.split(' ');
 // }
 // let str = 'Каждый охотник желает знать';
-//     document.write(arr(str));
+// //     document.write(arr(str));
+// //
+// // - Напишіть функцію delete_characters(str, length),
+// //     яка повертає підрядок, що складається із зазначеної кількості символів.
+// //     let str = 'Каждый охотник желает знать';
+// // document.writeln(delete_characters(str, 7)); // Каждый
 //
-// - Напишіть функцію delete_characters(str, length),
-//     яка повертає підрядок, що складається із зазначеної кількості символів.
-//     let str = 'Каждый охотник желает знать';
-// document.writeln(delete_characters(str, 7)); // Каждый
-
-let delete_characters = (str, length) =>
+// let delete_characters = (str, length) => str.substr(0, length);
+// document.writeln(delete_characters(str, 7));
 
 
 
