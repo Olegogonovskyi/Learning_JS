@@ -73,7 +73,40 @@ clasArr = [
 
 console.log(clasArr.sort((a, b) => a.order.length-b.order.length))
 
+// classwork
+// - Створити функцію конструктор яка дозволяє створювати об'єкти car, ' +
+// 'з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+// -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
+function car(model, brand, year, maxspeed, engine) {
+    this.model = model;
+    this.brand = brand;
+    this.year = year;
+    this.maxspeed = maxspeed;
+    this.engine = engine;
+    this.drive = function () {
+        return `їдемо зі швидкістю ${this.maxspeed} на годину`
+    }
+    this.info = function () {
+        return `model - ${this.model}; brand - ${this.brand}; year - ${this.year}; maxspeed - ${this.maxspeed}; engine - ${this.engine};`
+    }
+    this.increaseMaxSpeed = function (newSpeed) {
+        this.maxspeed = newSpeed;
+        return this.maxspeed
+    }
+    this.changeYear = function (newValue) {
+        this.year = newValue;
+        return this.year
+    }
+    this.addDriver = function (driver) {
+        this.driver = driver
+    }
+
+    }
 
 
 
