@@ -54,23 +54,24 @@ class Client {
         this.phone = phone;
         this.order = order;
     }
-};
+}
 
-let clasArr = [
-    new Client(2627, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-new Client(263227, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-new Client(27, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-new Client(7, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-new Client(2627, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-new Client(2627, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-new Client(2627, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-new Client(2627, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-new Client(2627, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-new Client(2627, 'lesko', 'bsko', 'psd@ukr.net', 911, [milk, bread, coffee]);
-]
+let clasArr;
+clasArr = [
+    new Client(2627, 'lesko', 'Re', 'psd@ukr.net', 911, ['water', 'ice - cream', 'bread', 'coffee']),
+    new Client(263227, 'leska', 'Lolip', 'psd@ukr.net', 112, ['milk', 'coffee']),
+    new Client(27, 'Marta', 'Masla', 'wwpsd@ukr.net', 113, ['bread']),
+    new Client(7, 'Bianka', 'Kasla', 'psdye7@ukr.net', 121, ['coffee', 'beer', 'candys']),
+    new Client(217, 'Piter', 'Faska', 'ousd@ukr.net', 931, ['beer', 'hotdog']),
+    new Client(26, 'Bonie', 'Wenka', 'ir7d@ukr.net', 912, ['pizza', 'beer']),
+    new Client(33, 'Adic', 'Popil', 'imd6@ukr.net', 913, ['milk', 'chocolate', 'flowers', 'candys']),
+    new Client(98, 'Lenka', 'Kiva', 'pop9@ukr.net', 914, ['vegetables', 'ice - cream']),
+    new Client(74, 'Manks', 'Mycyk', 'po9@ukr.net', 915, ['bread']),
+    new Client(988, 'Turbo', 'Orew', 'ell3@ukr.net', 961, ['flowers', 'candys'])
+];
+// Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
 
-
-
+console.log(clasArr.sort((a, b) => a.order.length-b.order.length))
 
 
 
