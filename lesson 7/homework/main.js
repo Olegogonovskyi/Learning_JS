@@ -108,6 +108,21 @@ function car(model, brand, year, maxspeed, engine) {
 
     }
 
+    class Car {
+        constructor(model, brand, year, maxspeed, engine) {
+            this.model = model;
+            this.brand = brand;
+            this.year = year;
+            this.maxspeed = maxspeed;
+            this.engine = engine;
+
+        }
+        drive () { return `їдемо зі швидкістю ${this.maxspeed} на годину`};
+        info () {return `model - ${this.model}; brand - ${this.brand}; year - ${this.year}; maxspeed - ${this.maxspeed}; engine - ${this.engine};`}
+        increaseMaxSpeed (newSpeed) {return this.maxspeed = newSpeed};
+        changeYear (newValue) {return this.year = newValue};
+        addDriver (driver) {return
+    }
 
 
 
