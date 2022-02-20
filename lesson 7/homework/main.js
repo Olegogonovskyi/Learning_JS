@@ -152,8 +152,7 @@ cartwo.drive;
 cartwo.info;
 cartwo.increaseMaxSpeed (300);
 cartwo.changeYear (1980);
-cartwo.addDriver ({name: 'Bobyk'})
-
+cartwo.addDriver ({name: 'Bobyk'}
 
 
 
