@@ -31,3 +31,4 @@ console.log(linkList)
 let txtlistElement2 = document.getElementsByClassName('listElement2');
 console.log(txtlistElement2)
 console.log(txtlistElement2[0].innerHTML);
+
