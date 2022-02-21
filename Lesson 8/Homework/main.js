@@ -23,7 +23,7 @@ changecolor.style.background = 'red'
 changecolor.style.color = 'blue'
 
 let stringrules = document.getElementById('rules');
-console.log(stringrules.classList)
+console.log(stringrules.classList.value)
 
 let classelemfcrul = document.getElementsByClassName('fc_rules');
 for (const classelemfcrulElement of classelemfcrul) {
