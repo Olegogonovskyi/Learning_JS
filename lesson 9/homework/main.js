@@ -18,3 +18,21 @@ document.body.append(divel);
 let divelclone = divel.cloneNode(divel);
 document.body.append(divelclone);
 
+// - Є масив:
+//     ['Main','Products','About us','Contacts']
+// Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву
+// створює li та додає його до блоку .menu
+// Завдання робити через цикли.
+
+let arr = ['Main','Products','About us','Contacts'];
+
+let arrapend = (arr) => {
+    let menuclasses = document.getElementsByClassName('menu')
+    let menuclas = menuclasses[0]
+    for (const string of arr) {
+        let arrelement = document.createElement('li')
+        arrelement.innerText = 'string'
+        menuclas.append(arrelement)
+    }
+}
+console.log(arrapend(arr))
