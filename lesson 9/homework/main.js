@@ -26,13 +26,51 @@ document.body.append(divelclone);
 
 let arr = ['Main','Products','About us','Contacts'];
 
-let arrapend = (arr) => {
     let menuclasses = document.getElementsByClassName('menu')
     let menuclas = menuclasses[0]
     for (const string of arr) {
         let arrelement = document.createElement('li')
-        arrelement.innerText = 'string'
+        arrelement.innerText = `${string}`
         menuclas.append(arrelement)
     }
+
+
+
+// - Є масив
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+// Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
+// Завдання робити через цикли.
+// За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,
+// //     в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
+// //     Завдання робити через цикли.
+let wrap = document.createElement('div');
+menuclas.after(wrap)
+for (const coursesAndDurationArrayElement of coursesAndDurationArray) {
+    let h1 = document.createElement('h1');
+    let parag = document.createElement('p');
+    h1.innerText = `${coursesAndDurationArrayElement.title}`;
+h1.classList.add('heading');
+    parag.innerText = `monthDuration ${coursesAndDurationArrayElement.monthDuration}`;
+    parag.classList.add('description')
+    wrap.append(h1);
+    wrap.append(parag)
 }
-console.log(arrapend(arr))
+//
+
+
+
+
+
+
+
+
+
+
+
