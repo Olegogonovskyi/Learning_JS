@@ -21,6 +21,19 @@ formone.onsubmit = function (e) {
     }
 };
 // - Создайте меню, которое раскрывается/сворачивается при клике
+let menuItems = ['main', 'about', 'contacts', 'projects']
+let menuclass = document.getElementsByClassName('menu')[0];
+let itemblock = document.getElementById('items')
+for (const menuclass1 of menuItems) {
+    let menuelement = document.createElement('li')
+    menuelement.innerText = `${menuclass1}`
+    menuclass.after(menuelement)
+}
+menuclass.onclick = function () {
+    itemblock.classList.toggle('hide')
+}
+
+
 
 
 // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
