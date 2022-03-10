@@ -13,5 +13,16 @@ formone.onsubmit = function (e) {
 let formtwo = document.getElementsByTagName('form')[1];
 formtwo.onsubmit = function (e) {
     e.preventDefault();
-    localStorage.setItem('car', JSON.stringify({model: e.target.model.value, type: e.target.type.value, volume: e.target.volume.value}))
+    let iscar = localStorage.getItem('car')
+    let inpcar = {model: e.target.model.value, type: e.target.type.value, volume: e.target.volume.value}
+    if (!iscar) {
+        iscar = [];
+        iscar.push(inpcar)
+        localStorage.setItem('car', JSON.stringify(iscar))
+    } else {
+        let reliscar = JSON.parse(iscar);
+        reliscar.push(inpcar)
+        localStorage.setItem('car', JSON.stringify(reliscar))
+    }
 }
+
