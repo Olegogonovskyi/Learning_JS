@@ -3,10 +3,11 @@ console.log(url)
 let id = url.searchParams.get('id')
 console.log(id)
 
+
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then((response) => response.json())
     .then(jsonResponses => {
-        console.log(jsonResponses)
+            let wrap = document.getElementsByClassName('wrap')[0]
         aboutuser = JSON.stringify(jsonResponses)
         userdetails = document.createElement('div')
         userdetails.classList.add ('userdetails')
@@ -15,6 +16,38 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         // anch.href = `./post-details.html?id=${id}`
         //     anch.innerText = `Всі пости ${jsonResponses.name}`
         // userdetails.appendChild(anch)
-        document.body.appendChild(userdetails)
+        wrap.appendChild(userdetails)
+
     })
-let button = document.createElement()
+
+let button = document.createElement('button')
+button.innerText = `Всі пости`
+document.body.appendChild(button)
+button.onclick = function () {
+        fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+            .then((response) => response.json())
+            .then(jsonResponses => {
+                    for (const postitem of jsonResponses) {
+                            let forposts = document.getElementsByClassName(`forposts`)[0]
+                            let post = document.createElement('div')
+                            post.classList.add ('post')
+                            post.innerText = `Назва посту: ${postitem.title}`
+                            let postbutton = document.createElement('button')
+                            postbutton.innerText = 'Коментарі до посту'
+                            postbutton.onclick = function () {
+                                    location.href = `./post-details.html?id=${id}`
+
+                            }
+                            forposts.append(post,postbutton)
+
+
+
+                    }
+
+
+
+            })
+
+}
+
+
