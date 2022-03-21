@@ -8,8 +8,8 @@ let wrap = document.getElementsByClassName('wrap')[0]
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then((response) => response.json())
     .then(jsonResponses => {
-                    aboutuser = JSON.stringify(jsonResponses)
-        userdetails = document.createElement('div')
+                   let aboutuser = JSON.stringify(jsonResponses)
+        let userdetails = document.createElement('div')
         userdetails.classList.add ('userdetails')
         userdetails.innerHTML = aboutuser
         // let anch = document.createElement("a")
@@ -24,7 +24,7 @@ let button = document.createElement('button')
 button.innerText = `Всі пости`
 wrap.appendChild(button)
 button.onclick = function () {
-        fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+            fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
             .then((response) => response.json())
             .then(jsonResponses => {
                     for (const postitem of jsonResponses) {
@@ -36,7 +36,6 @@ button.onclick = function () {
                             postbutton.innerText = 'Коментарі до посту'
                             postbutton.onclick = function () {
                                     location.href = `./post-details.html?id=${postitem.id}`
-
                             }
                             forposts.append(post,postbutton)
 
