@@ -1,6 +1,4 @@
-// let wrap = document.createElement('div')
-// wrap.classList.add('wrap')
-// document.body.appendChild(wrap)
+
 let wrap = document.getElementsByClassName('wrap')[0];
 
 fetch('https://jsonplaceholder.typicode.com/users')
@@ -13,6 +11,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
         let anch = document.createElement('a')
         anch.innerText = `${user.id} - ${user.name}`
         anch.href = `./user_details.html?id=${user.id}`
+        console.log(user.id)
         userbox.appendChild(anch)
         wrap.appendChild(userbox)
     }});

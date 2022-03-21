@@ -2,13 +2,13 @@ let url = new URL(location.href);
 console.log(url)
 let id = url.searchParams.get('id')
 console.log(id)
+let wrap = document.getElementsByClassName('wrap')[0]
 
 
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then((response) => response.json())
     .then(jsonResponses => {
-            let wrap = document.getElementsByClassName('wrap')[0]
-        aboutuser = JSON.stringify(jsonResponses)
+                    aboutuser = JSON.stringify(jsonResponses)
         userdetails = document.createElement('div')
         userdetails.classList.add ('userdetails')
         userdetails.innerHTML = aboutuser
@@ -22,7 +22,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
 
 let button = document.createElement('button')
 button.innerText = `Всі пости`
-document.body.appendChild(button)
+wrap.appendChild(button)
 button.onclick = function () {
         fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
             .then((response) => response.json())
@@ -35,7 +35,7 @@ button.onclick = function () {
                             let postbutton = document.createElement('button')
                             postbutton.innerText = 'Коментарі до посту'
                             postbutton.onclick = function () {
-                                    location.href = `./post-details.html?id=${id}`
+                                    location.href = `./post-details.html?id=${postitem.id}`
 
                             }
                             forposts.append(post,postbutton)
