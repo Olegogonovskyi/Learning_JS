@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #9ae3e3;
+    margin: 250px;
+}
+.comment {
+    margin-top: 10px;
+    background: gray;
+}
