@@ -13,7 +13,7 @@
 // l) отримати елементи p та змінити їм padding на 20px
 // m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year. Пример sep-2021)
 let idmainheader = document.getElementById('main_header');
-idmainheader.classList.add('main')
+idmainheader.classList.add('main1')
 console.log(idmainheader)
 
 let elementul = document.getElementsByTagName('ul');

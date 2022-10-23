@@ -18,14 +18,13 @@ console.log(idrules.innerText);
 idrules.innerText = 'правила існують для того, щоб їх порушувати';
 console.log(idrules.innerText);
 
-let changecolor = document.body
-changecolor.style.background = 'red'
-changecolor.style.color = 'blue'
+document.body.style.background = 'red'
+document.body.style.color = 'blue'
 
 let stringrules = document.getElementById('rules');
 console.log(stringrules.classList.value)
 
 let classelemfcrul = document.getElementsByClassName('fc_rules');
 for (const classelemfcrulElement of classelemfcrul) {
-    classelemfcrulElement.style.color = 'red'
+    classelemfcrulElement.style.color = 'white'
 }
