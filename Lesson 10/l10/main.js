@@ -231,89 +231,32 @@ let usersList = [
     }
 ];
 
-let wrapblock = document.createElement('div')
-wrapblock.classList.add('wrap')
-document.body.append(wrapblock)
-wrapblock.style.color = '#060505';
-wrapblock.style.background = 'grey'
-wrapblock.style.width = '100 %'
-wrapblock.style.alignItems = 'center'
-// console.log(usersList)
-// if(Object.getPrototypeOf(usersList) === 'Object') {
-//     console.log('11111')
-// } else {}
+let coord = document.createElement('h1');
+document.body.appendChild(coord)
 
+// document.onmousemove = function (e) {
+//     let coordX = e.clientX;
+//     let coordY = e.clientY;
+//     coord.innerText = `Координата Х: ${coordX}; координата Y: ${coordY}`
+// }
 
-let fnex = function (objc) {
+// let form1 = document.getElementById('form1');
+// let usersform = []
+// form1.onsubmit = function (e) {
+//     e.preventDefault()
+//     let divtex = []
+//     let userform = {login: e.target.Login.value, password: e.target.Password.value}
+//     coord.innerText = `Login: ${e.target.Login.value}, password: ${e.target.Password.value}`
+//     usersform.push(userform)
+//     divtex.push(userform)
+//     console.log(usersform);
+// }
 
-    for (let objcKey in objc) {
-        // let mainEldiv = document.createElement('div')
-        // console.log(`jsjsjsj ${typeof objc[objcKey]}`)
-
-        console.log(Object.keys(objc[objcKey])) // назви властивостей
-        console.log(Object.values(objc[objcKey])) // значення властивостей
-
-    }
-}
-fnex(usersList)
-// console.log('ndn')
-// let fun4 = function (ob) {
-//     for (let i = 0; i < ob.length; i++) {
-//         const obElement = ob[i];
-//         console.log(obElement)
-//         console.log('---------------')
-//         console.log(ob.getAllKeys(obElement))
-//     }
-    // for (let obKey in ob) {
-    //     console.log(ob[obKey])
-    //     console.log('---------------')
-    //     console.log(ob.length)
-    //
-    // }
-
-
-for (let usersListElement of usersList) {
-    let infobox = document.createElement('div')
-    infobox.classList.add(`infobox`)
-    let h1 = document.createElement("h1")
-    let h2 = document.createElement('h2')
-    h1.innerText = `ID ${usersListElement.id} - name "${usersListElement.name}" `
-    h2.innerText = `username ${usersListElement.username}, email ${usersListElement.email}`
-    wrapblock.appendChild(infobox);
-    infobox.append(h1, h2)
-    infobox.style.margin = '10 px'
-
-    let adressbox = document.createElement('div');
-    adressbox.classList.add('adressbox')
-    adressbox.innerText = `address: street - ${usersListElement.address.street}, ${usersListElement.address.suite}, city: ${usersListElement.address.city}`
-    wrapblock.appendChild(adressbox)
-
-}
-
-
-// let recursionSite = function (startpage) {
-//     let arrh = [];
-//     let arrdiv = [];
-// let children = startpage.children
-//     // let arrh = [];
-//     // let arrdiv = []
-//     for (let child of children) {
-//         if (child.localName === "h1" || child.localName === "h2") {
-//             arrh.push(child.outerText)
-//             console.log(child)
-//         } else {
-//             arrdiv.push(child.outerText)
-//         }
-//
-//
-//         recursionSite(child)
-//     }
-// // console.log(arrh)
-//     console.log(arrdiv)
-//     console.log(arrh)
+// let searchInput = document.getElementsByTagName('form')[0];
+// searchInput.onsubmit = function (e) {
+//     e.preventDefault();
+//     console.log(usersList.filter((user) => user.name === searchInput.findusers.value))
 //
 // }
-// console.log(recursionSite(wrapblock))
-// recursionSite(wrapblock)
 
 

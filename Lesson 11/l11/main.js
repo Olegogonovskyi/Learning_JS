@@ -1,3 +1,16 @@
+let users = [
+    {name: 'vasya', age: 31, status: false},
+    {name: 'petya', age: 30, status: true},
+    {name: 'kolya', age: 29, status: true},
+    {name: 'olya', age: 28, status: false},
+    {name: 'max', age: 30, status: true},
+    {name: 'anya', age: 31, status: false},
+    {name: 'oleg', age: 28, status: false},
+    {name: 'andrey', age: 29, status: true},
+    {name: 'masha', age: 30, status: true},
+    {name: 'olya', age: 31, status: false},
+    {name: 'max', age: 31, status: true}
+];
 let usersList = [
     {
         id: 1,
@@ -231,89 +244,34 @@ let usersList = [
     }
 ];
 
-let wrapblock = document.createElement('div')
-wrapblock.classList.add('wrap')
-document.body.append(wrapblock)
-wrapblock.style.color = '#060505';
-wrapblock.style.background = 'grey'
-wrapblock.style.width = '100 %'
-wrapblock.style.alignItems = 'center'
-// console.log(usersList)
-// if(Object.getPrototypeOf(usersList) === 'Object') {
-//     console.log('11111')
-// } else {}
+let wrap = document.createElement('div');
+wrap.classList.add('wrap');
+document.body.appendChild(wrap);
 
+for (let user of users) {
+    let usersdiv = document.createElement('div');
+    usersdiv.classList.add('usersdiv');
+    wrap.appendChild(usersdiv)
+    let h3username = document.createElement('h3')
+    usersdiv.append(h3username);
+    h3username.innerText = `name: ${user.name} - age: ${user.age}`
+    let userbutton = document.createElement('button')
+    userbutton.innerText = 'add to favorite';
+    usersdiv.append(userbutton)
+    userbutton.onclick = function () {
+        let localstoregeuserlist = localStorage.getItem('userslist');
+        if (!localstoregeuserlist) {
+            let userslist = [];
+            userslist.push(user)
+            localStorage.setItem('userslist', `${JSON.stringify(userslist)}`)
+        } else {
+            let userslist = JSON.parse(localstoregeuserlist);
+            userslist.push(user);
+            localStorage.setItem('userslist', `${JSON.stringify(userslist)}`)
 
-let fnex = function (objc) {
-
-    for (let objcKey in objc) {
-        // let mainEldiv = document.createElement('div')
-        // console.log(`jsjsjsj ${typeof objc[objcKey]}`)
-
-        console.log(Object.keys(objc[objcKey])) // назви властивостей
-        console.log(Object.values(objc[objcKey])) // значення властивостей
-
+        }
     }
 }
-fnex(usersList)
-// console.log('ndn')
-// let fun4 = function (ob) {
-//     for (let i = 0; i < ob.length; i++) {
-//         const obElement = ob[i];
-//         console.log(obElement)
-//         console.log('---------------')
-//         console.log(ob.getAllKeys(obElement))
-//     }
-    // for (let obKey in ob) {
-    //     console.log(ob[obKey])
-    //     console.log('---------------')
-    //     console.log(ob.length)
-    //
-    // }
+let x = JSON.stringify(usersList)
 
-
-for (let usersListElement of usersList) {
-    let infobox = document.createElement('div')
-    infobox.classList.add(`infobox`)
-    let h1 = document.createElement("h1")
-    let h2 = document.createElement('h2')
-    h1.innerText = `ID ${usersListElement.id} - name "${usersListElement.name}" `
-    h2.innerText = `username ${usersListElement.username}, email ${usersListElement.email}`
-    wrapblock.appendChild(infobox);
-    infobox.append(h1, h2)
-    infobox.style.margin = '10 px'
-
-    let adressbox = document.createElement('div');
-    adressbox.classList.add('adressbox')
-    adressbox.innerText = `address: street - ${usersListElement.address.street}, ${usersListElement.address.suite}, city: ${usersListElement.address.city}`
-    wrapblock.appendChild(adressbox)
-
-}
-
-
-// let recursionSite = function (startpage) {
-//     let arrh = [];
-//     let arrdiv = [];
-// let children = startpage.children
-//     // let arrh = [];
-//     // let arrdiv = []
-//     for (let child of children) {
-//         if (child.localName === "h1" || child.localName === "h2") {
-//             arrh.push(child.outerText)
-//             console.log(child)
-//         } else {
-//             arrdiv.push(child.outerText)
-//         }
-//
-//
-//         recursionSite(child)
-//     }
-// // console.log(arrh)
-//     console.log(arrdiv)
-//     console.log(arrh)
-//
-// }
-// console.log(recursionSite(wrapblock))
-// recursionSite(wrapblock)
-
-
+console.log(JSON.parse(x))

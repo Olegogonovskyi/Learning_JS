@@ -30,7 +30,7 @@ for (const menuclass1 of menuItems) {
     menuclass.after(menuelement)
 }
 menuclass.onclick = function () {
-    itemblock.classList.toggle('hide')
+    itemblock.classList.toggle('hidem')
 }
 
 
