@@ -53,3 +53,27 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
         }
     }
 })
+
+let form1 = document.getElementsByTagName('form')[0];
+form1.onsubmit = function (e) {
+    e.preventDefault()
+    let lokalstoragetowlisd = localStorage.getItem('tows')
+    let tow = {
+        name: e.target.Name.value,
+        howmuch: e.target.Howmuch.value,
+        price: e.target.Price.value,
+        url: e.target.Picture.value
+
+    }
+    if (!lokalstoragetowlisd) {
+        let towstr = [];
+        towstr.push(tow);
+        localStorage.setItem('tows', `${JSON.stringify(towstr)}`)
+    } else {
+        let towstr = JSON.parse(lokalstoragetowlisd)
+        towstr.push(tow)
+        localStorage.setItem('tows', `${JSON.stringify(towstr)}`)
+    }
+
+    console.log(lokalstoragetowlisd)
+}
